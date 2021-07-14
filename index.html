@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nepali audio collection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-wrapper">
+        <!-- <img src="./images/tu-logo.jpg" alt="TU logo" class="tu-logo" /> -->
+        <h1 class="header-text">Nepali audio data collection</h1>
+      </div>
+    </div>
+    <div class="recording-wrapper">
+      <img class="refresh-image" src="images/refresh.png" alt="" />
+      <p class="nepali-text"></p>
+      <div class="controls">
+        <div class="controls-buttons">
+          <!-- <button id="recordButton">Record</button> -->
+          <img id="recordButton" src="./images/record.png" alt="Record" />
+          <!-- <button id="pauseButton" disabled>Pause</button> -->
+          <img id="stopButton" src="./images/stop.png" alt="Record" />
+
+          <img id="pauseButton" src="./images/pause.png" alt="Record" />
+          <!-- <button id="stopButton" disabled>Stop</button> -->
+
+          <img id="playButton" src="./images/play.png" alt="Record" />
+        </div>
+        <p class="recording-time"><span class="mins">00</span>:<span class="secs">00</span></p>
+      </div>
+      <div class="recorded-audio-wrapper">
+        <div class="recorded-audio"></div>
+
+        <p id="category-text">Select a category that best represents the above text</p>
+        <div class="category-selection">
+          <input type="checkbox" name="Politics" onclick="checkOnlyOne(this)" />
+          <div class="Politics">Politics</div>
+
+          <input type="checkbox" name="Sports" onclick="checkOnlyOne(this)" />
+          <div class="Sports">Sports</div>
+
+          <input type="checkbox" name="Economy" onclick="checkOnlyOne(this)" />
+          <div class="Economy">Economy</div>
+
+          <input type="checkbox" name="National" onclick="checkOnlyOne(this)" />
+          <div class="National">National</div>
+
+          <input type="checkbox" name="Entertainment" onclick="checkOnlyOne(this)" />
+          <div class="Entertainment">Entertainment</div>
+
+          <input type="checkbox" name="Others" onclick="checkOnlyOne(this)" />
+          <div class="Others">Others</div>
+        </div>
+
+        <p id="category-optional-text">
+          Select other categories if they also represent the above text. Else leave it blank.
+        </p>
+        <div class="category-selection-optional">
+          <input type="checkbox" name="Politics" />
+          <div class="Politics">Politics</div>
+
+          <input type="checkbox" name="Sports" />
+          <div class="Sports">Sports</div>
+
+          <input type="checkbox" name="Economy" />
+          <div class="Economy">Economy</div>
+
+          <input type="checkbox" name="National" />
+          <div class="National">National</div>
+
+          <input type="checkbox" name="Entertainment" />
+          <div class="Entertainment">Entertainment</div>
+        </div>
+        <div class="name-wrapper">
+          <p class="name-header">Your name:</p>
+          <input type="text" class="name" />
+        </div>
+
+        <button href="#" class="submit-button">Submit</button>
+      </div>
+    </div>
+    <!-- inserting these scripts at the end to be able to use all the elements in the DOM -->
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
